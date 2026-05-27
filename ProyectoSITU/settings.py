@@ -37,7 +37,9 @@ SECRET_KEY = os.environ.get(
 DEBUG = env_bool("DEBUG", True)
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', 'ape3-django-stiven.azurewebsites.net']
-CSRF_TRUSTED_ORIGINS = env_list("CSRF_TRUSTED_ORIGINS")
+CSRF_TRUSTED_ORIGINS = [
+    'https://ape3-django-stiven.azurewebsites.net',
+]
 
 
 # Application definition
